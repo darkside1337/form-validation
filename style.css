@@ -1,0 +1,87 @@
+body {
+    min-height: 100vh;
+    /*  border: 1px solid red; */
+    overflow-y: hidden;
+    background-color: lightblue;
+}
+
+.formContainer {
+    border: 1px solid cyan;
+    height: 600px;
+    width: 500px;
+    margin: 25px auto;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+#testForm {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 16px;
+
+}
+
+#testForm div {
+    display: flex;
+    flex-direction: column;
+}
+
+.required::before {
+    content: "*";
+    color: red;
+}
+
+#testForm div:nth-child(7) {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: space-evenly;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+input:focus:invalid {
+    border: 2px solid red;
+}
+
+#testForm h2 {
+    text-align: center;
+}
+
+#submitButton {
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 8px;
+    border-radius: 16px;
+    transition: transform ease-in-out 0.15s;
+}
+
+#submitButton:hover {
+    transform: scale(1.1);
+}
+
+#resetButton {
+    border: 2px solid black;
+    padding: 8px;
+    border-radius: 16px;
+    transition: transform ease-in-out 0.15s;
+}
+
+#resetButton:hover {
+    transform: scale(1.1);
+}
+
+.error {
+    display: none !important;
+    height: 50px;
+    width: 100%;
+    border: 2px solid red;
+    text-align: center;
+    border-radius: 14px;
+    padding: 8px;
+}
